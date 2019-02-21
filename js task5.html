@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>js task5</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+     
+       .container-fluid {
+       	background:#ff1700;
+       	width: 500px;
+       	margin-top: 60px;
+       }
+
+	#N1 {
+		width:180px;
+		height:30px;
+		border-radius: 10px;
+		border-color: purple;
+		text-align: center;
+		font-size: 18px;
+	}
+    
+    #N2 {
+    	width:180px;
+		height:30px;
+		border-radius: 10px;
+		border-color: purple;
+		text-align: center;
+		font-size: 18px;
+	}
+
+	#N3 {
+		width:180px;
+		height:30px;
+		border-radius: 10px;
+		border-color: purple;
+		text-align: center;
+		font-size: 18px;
+	}
+
+  .btn {
+  	width: 90px;
+  	height: 40px;
+  	color:white;
+
+  }
+p {
+	color:#530033;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+</style>
+<body>
+	<div class="container-fluid text-center">
+		<div class="row bg-danger">
+
+			<div class="col-lg-12 col-md-12 col-sm-12" >
+
+		<h2>DISPLAY MAX & MIN VALUE</h2>
+	</div>
+</div>
+		<br>
+		<div class="row">
+		<div clas="col-lg-12 col-md-12 col-sm-12">
+	<b>N1:	</b><input type="text" id="N1" name="N1">
+	<br>
+	<br>
+	<b>N2:	</b><input type="text" id="N2"name="N2">
+</div>
+</div>
+<br>
+        
+        <div class="row">
+		<div clas="col-lg-12 col-md-12 col-sm-12">
+
+          <b>N3:	</b><input type="text" id="N3" name="N3">
+      </div>
+  </div>
+     <br>
+     <br>
+      <div class="row">
+		<div clas="col-lg-12 col-md-12 col-sm-12">
+
+	<button type="submit" onclick="myFunction()"  class="btn btn-primary">Max</button>
+		<button type="submit" onclick="myFunction1()"  class="btn btn-primary">Min</button>
+	</div>
+</div>
+
+	<br>
+	<br>
+ 
+ <p id="demo"></p>
+</div>
+</div>
+</div>
+
+<script>
+	function myFunction() {
+
+    var N1=Number(document.getElementById("N1").value)
+    var N2=Number(document.getElementById("N2").value)
+    var N3=Number(document.getElementById("N3").value)
+    var text=" "
+
+       if (N1>=N2&&N2>=N3) {
+       	text=N1
+       }
+        else if (N2>=N1&&N2>=N3){ 
+       	  text=N2}
+       
+       else if (N3>=N2&&N3>=N1
+       	){
+       	text=N3}
+
+     document.getElementById("demo").innerHTML="MAX :" + text ;
+	}
+
+	function myFunction1() {
+
+    var N1=Number(document.getElementById("N1").value)
+    var N2=Number(document.getElementById("N2").value)
+    var N3=Number(document.getElementById("N3").value)
+    var text=" "
+
+
+       if (N1>N2&&N2>N3) {
+       	text=N3
+       }
+        
+       
+       else if (N3>N2&&N1>N2
+       	){
+       	text=N2}
+
+       else if (N2>N1&&N3>N1){ 
+       	  text=N1}
+
+
+     document.getElementById("demo").innerHTML="MIN :" + text ;
+
+	}
+
+	
+
+
+
+
+</script>
+</body>
+</html>
